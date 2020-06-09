@@ -1,14 +1,24 @@
 'use strict';
 
-function isWhat(n) {
-  if (n < 2 || n % 1 !== 0) {
-    return false;
+function countingSheep(sheep) {
+  for (let i = 0; i <= sheep; i++) {
+    if (i === sheep) {
+      console.log(`All sheep jumped over the fence`);
+    } else {
+      console.log(`${i}: Another Sheep jumped over the fence`);
+    }
   }
-  for (let i = 2; i < n; ++i) {
-    if (n % i === 0) return false;
-  }
-  return true;
 }
 
+countingSheep(10);
 
-isWhat(5);
+function powerCalculator(base, expo) {
+  let power = base;
+  if (expo < 0) {
+    for (let i = 0; i <= expo; i++) {
+      power *= base;
+    }
+    return power;
+  }
+  return power;
+}
