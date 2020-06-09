@@ -22,3 +22,15 @@ function powerCalculator(base, expo) {
   }
   return power;
 }
+
+function stringReverser(string) {
+  let newString = '';
+  let char = '';
+  for(let i = string.length - 1; i >= 0 ; i--) {
+    char = string[i];
+    newString += char;
+  }
+  return newString;
+}
+
+
