@@ -26,7 +26,7 @@ function powerCalculator(base, expo) {
 function stringReverser(string) {
   let newString = '';
   let char = '';
-  for(let i = string.length - 1; i >= 0 ; i--) {
+  for (let i = string.length - 1; i >= 0; i--) {
     char = string[i];
     newString += char;
   }
@@ -38,7 +38,7 @@ function triangleCounter(n) {
   //n is the amount of layers in the triangle
   //so at n = 3 total = 3 + 2 + 1 = 6
   let total = 0;
-  for(let i = 0; i <= n; i++) {
+  for (let i = 0; i <= n; i++) {
     total += n - i;
     //n-0 = 3-0 = 3 total = 3
     //n-1 = 3-1 = 2 total = 5
@@ -47,4 +47,18 @@ function triangleCounter(n) {
   return total;
 }
 
+function stringSpliter(str) {
+  return str.split('/');
+}
 
+function fib(num) {
+  let fib = [0, 1];
+  let total = 0;
+  for (let i = 2; i <= num; i++) {
+    fib[i] = fib[i - 2] + fib[i - 1];
+    total = fib[i];
+  }
+  return fib, total;
+}
+
+fib(7);
